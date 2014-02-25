@@ -1,5 +1,8 @@
-package em;
+package oops;
 
+import meme.Counts;
+import meme.Motif;
+import meme.MotifLocations;
 import data.SequenceSet;
 import pair.Pair;
 
@@ -10,7 +13,7 @@ import pair.Pair;
  * @author Matthew Bernstein - matthewb@cs.wisc.edu
  *
  */
-public class EM 
+public class MEME_OOPS 
 {
 	/**
 	 * The alphabet of DNA sequences

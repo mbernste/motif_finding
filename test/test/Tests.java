@@ -1,11 +1,11 @@
 package test;
 
+import oops.MEME_OOPS;
+import meme.Counts;
+import meme.Motif;
+import meme.MotifLocations;
 import data.SequenceReader;
 import data.SequenceSet;
-import em.Counts;
-import em.EM;
-import em.Motif;
-import em.MotifLocations;
 
 public class Tests 
 {
@@ -26,7 +26,7 @@ public class Tests
 
 	public static void testRandomMotif()
 	{
-		Motif motif = new Motif(3, EM.DNA_ALPHABET);
+		Motif motif = new Motif(3, MEME_OOPS.DNA_ALPHABET);
 		System.out.println(motif);
 	}
 	
@@ -68,14 +68,14 @@ public class Tests
 	public static void testProbabilityOfSequence()
 	{
 		Motif motif = exampleMotif();
-		double probability = EM.probabilityOfSequence("GCTGTAG", motif, 2);
+		double probability = MEME_OOPS.probabilityOfSequence("GCTGTAG", motif, 2);
 		System.out.println("Probability of sequence \"GCTGTAG\": " + probability);
 	}
 	
 	public static void testEStep()
 	{
 		SequenceSet sequences = getSequences();
-		MotifLocations z = EM.eStep(sequences, exampleMotif());
+		MotifLocations z = MEME_OOPS.eStep(sequences, exampleMotif());
 		
 		System.out.println(z);
 	}
@@ -89,7 +89,7 @@ public class Tests
 	public static void testSymbolCountAtMotifPosition()
 	{
 		SequenceSet sequences = getSequences();
-		MotifLocations z = EM.eStep(sequences, exampleMotif());
+		MotifLocations z = MEME_OOPS.eStep(sequences, exampleMotif());
 	
 		System.out.println("Z");
 		System.out.println(z);
@@ -99,7 +99,7 @@ public class Tests
 	public static void testTotalCountAtMotifPosition()
 	{
 		SequenceSet sequences = getSequences();
-		MotifLocations z = EM.eStep(sequences, exampleMotif());
+		MotifLocations z = MEME_OOPS.eStep(sequences, exampleMotif());
 		
 		System.out.println("COUNT: " + sequences.totalCountAtMotifPosition('C', 2, 3, z));
 	}
@@ -110,9 +110,9 @@ public class Tests
 		
 		Motif original = exampleMotif();
 		
-		MotifLocations z = EM.eStep(sequences, exampleMotif());
+		MotifLocations z = MEME_OOPS.eStep(sequences, exampleMotif());
 		
-		Motif updated = EM.mStep(sequences, z, original.getWidth());
+		Motif updated = MEME_OOPS.mStep(sequences, z, original.getWidth());
 	
 		System.out.println(z);
 		System.out.println(updated);
@@ -123,7 +123,7 @@ public class Tests
 		
 		SequenceSet sequences = getSequences();
 		Motif p = exampleMotif();
-		MotifLocations z = EM.eStep(sequences, exampleMotif());
+		MotifLocations z = MEME_OOPS.eStep(sequences, exampleMotif());
 		
 		Counts counts = new Counts(sequences, z, p);
 		
@@ -135,7 +135,7 @@ public class Tests
 	{
 		SequenceSet sequences = getSequences();
 		Motif p = exampleMotif();
-		MotifLocations z = EM.eStep(sequences, exampleMotif());
+		MotifLocations z = MEME_OOPS.eStep(sequences, exampleMotif());
 		
 		System.out.println(sequences.pickOutMotifs(p, z));
 	}
@@ -145,7 +145,7 @@ public class Tests
 		String subSeq = "GTAT";
 		Double param = 0.5;
 		
-		Motif p = new Motif(subSeq, EM.DNA_ALPHABET, param);
+		Motif p = new Motif(subSeq, MEME_OOPS.DNA_ALPHABET, param);
 		
 		System.out.println(p);
 	}
@@ -154,11 +154,11 @@ public class Tests
 	{
 		SequenceSet sequences = getSequences();
 		Motif p = exampleMotif();
-		MotifLocations z = EM.eStep(sequences, p);
+		MotifLocations z = MEME_OOPS.eStep(sequences, p);
 
 		System.out.println(z);
 		
-		System.out.println("Probability of data: " + EM.probabilityOfData(sequences, p, z));
+		System.out.println("Probability of data: " + MEME_OOPS.probabilityOfData(sequences, p, z));
 				
 	}
 }

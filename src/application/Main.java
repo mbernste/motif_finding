@@ -6,12 +6,14 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import oops.MEME_OOPS;
+
+import meme.Motif;
+import meme.MotifLocations;
+
 import pair.Pair;
 import data.SequenceReader;
 import data.SequenceSet;
-import em.EM;
-import em.Motif;
-import em.MotifLocations;
 
 /**
  * The main program
@@ -34,7 +36,7 @@ public class Main
 		/*
 		 * Run EM
 		 */
-		Pair<Motif, MotifLocations> result = EM.run(sequences, 14);
+		Pair<Motif, MotifLocations> result = MEME_OOPS.run(sequences, 14);
 		Motif resultP = result.getFirst();
 		MotifLocations resultZ = result.getSecond();
 		ArrayList<Pair<Integer, String>> realizedMotifs 
