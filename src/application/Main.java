@@ -6,10 +6,10 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 
-import oops.MEME_OOPS;
 
 import meme.Motif;
 import meme.MotifLocations;
+import meme.oops.MEME_OOPS;
 
 import pair.Pair;
 import data.SequenceReader;

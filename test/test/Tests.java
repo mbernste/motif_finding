@@ -1,9 +1,9 @@
 package test;
 
-import oops.MEME_OOPS;
 import meme.Counts;
 import meme.Motif;
 import meme.MotifLocations;
+import meme.oops.MEME_OOPS;
 import data.SequenceReader;
 import data.SequenceSet;
 

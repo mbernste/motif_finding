@@ -1,4 +1,4 @@
-package oops;
+package meme.oops;
 
 import meme.Counts;
 import meme.Motif;
