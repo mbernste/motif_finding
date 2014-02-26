@@ -7,5 +7,5 @@ This project includes algorithms for finding common motifs in DNA sequences.  A 
 
 Multiple EM for Motif Elicitation (MEME):
    
-    OOPS model - One Occurrance Per Sequence
+    OOPS model - One Occurrence Per Sequence
     
